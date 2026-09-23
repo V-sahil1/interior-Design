@@ -3,6 +3,7 @@ import { Manrope, Playfair_Display } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCta from "@/components/MobileCta";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="min-h-screen w-full bg-background pt-20 lg:pt-24">{children}</main>
         <Footer />
         <MobileCta />
+        <SmoothScroll />
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { gsap, useGSAP } from "@/lib/gsap";
 import Icon from "./Icon";
+import { getLenis } from "./SmoothScroll";
 import { IMAGES, navItems } from "@/lib/data";
 
 export default function Header() {
@@ -20,6 +21,8 @@ export default function Header() {
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
+    if (open) getLenis()?.stop();
+    else getLenis()?.start();
   }, [open]);
 
   const isActive = (href: string) => pathname === href || pathname.startsWith(href + "/");

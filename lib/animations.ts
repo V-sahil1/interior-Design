@@ -1,6 +1,7 @@
 "use client";
 
 import { gsap, ScrollTrigger, SplitText } from "./gsap";
+import { initStory, storyReduced } from "./story";
 
 /**
  * Data-attribute driven animation system, themed on interior architecture:
@@ -23,7 +24,11 @@ export function initAnimations(root: HTMLElement) {
   const mm = gsap.matchMedia();
 
   mm.add(
-    { motion: "(prefers-reduced-motion: no-preference)", reduce: "(prefers-reduced-motion: reduce)" },
+    {
+      motion: "(prefers-reduced-motion: no-preference)",
+      reduce: "(prefers-reduced-motion: reduce)",
+      desktop: "(min-width: 768px)",
+    },
     (ctx) => {
       const q = <T extends Element = HTMLElement>(sel: string) => Array.from(root.querySelectorAll<T & HTMLElement>(sel));
 
@@ -32,8 +37,12 @@ export function initAnimations(root: HTMLElement) {
         gsap.set(q("[data-curtain]"), { autoAlpha: 0 });
         gsap.set(q("[data-bp]"), { strokeDashoffset: 0 });
         gsap.set(q("[data-bp-wrap]"), { opacity: 0.3 });
+        storyReduced(root);
         return;
       }
+
+      // pinned story chapters first, so later triggers account for their pin spacing
+      initStory(root, Boolean(ctx.conditions?.desktop));
 
       q("[data-hero]").forEach(heroIntro);
 
@@ -217,6 +226,8 @@ export function initAnimations(root: HTMLElement) {
         );
       });
 
+      ScrollTrigger.sort();
+      ScrollTrigger.refresh();
       document.fonts?.ready.then(() => ScrollTrigger.refresh());
     },
   );

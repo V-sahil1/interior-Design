@@ -364,3 +364,73 @@ export const navItems = [
   { href: "/journal", label: "Journal" },
   { href: "/contact", label: "Contact" },
 ];
+
+export const dayMoments = [
+  {
+    time: "06:40",
+    phase: "Dawn",
+    title: "First light on travertine",
+    body: "Sheer linen softens the eastern sun into a single warm wash. The stone walls are still cool from the night; the house wakes slowly.",
+    image: IMAGES.livingSalon,
+    bg: "#efe7da",
+    fg: "#241b14",
+  },
+  {
+    time: "12:30",
+    phase: "Noon",
+    title: "Shade, stone, stillness",
+    body: "450mm rammed earth walls hold the heat at bay. Deep verandas cast long shadows, and the courtyard pond draws a breeze through every room.",
+    image: IMAGES.earthHouse,
+    bg: "#f4e3c1",
+    fg: "#241b14",
+  },
+  {
+    time: "17:50",
+    phase: "Dusk",
+    title: "The courtyard exhales",
+    body: "The western sun slips low across the arcade. Family gathers on the teak bench as the reflecting pond turns to copper.",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuD4AYi0qCCMC6g8IDXTeRFXoVhD7uxwJPqce8PooHsJPuZzXoBEroISRLJeFS-bb4es89KLtwvIvzvff5JO--dTsCh6n7FOMjQ5Ek3enzOh4z8k6iPjThqrbiKRXY6I5OO-1fCA6F85SFU2eu5rNxBlf5PHN8q_GkCgKZLalZ6t98a4LN72KdkgKoUcuEDB-7dWAIkyBe26X-Zl8biBuvcqD9ed8BXX1BthtFd6GN6vUOH80Ykr7HVK",
+    bg: "#a86f45",
+    fg: "#fcf9f3",
+  },
+  {
+    time: "21:15",
+    phase: "Night",
+    title: "Brass and lamplight",
+    body: "2700K coves graze the walnut; a hand-beaten brass pendant pools light over the table. The house becomes intimate, quiet, complete.",
+    image: IMAGES.studioEvening,
+    bg: "#1a1410",
+    fg: "#f3f0ea",
+  },
+];
+
+export const blueprintSteps = [
+  {
+    label: "The Plan",
+    title: "Every home begins as a single line.",
+    body: "Sun paths, prevailing breezes, and the way a family moves through a day — all resolved on paper first.",
+  },
+  {
+    label: "The Material",
+    title: "Then the line becomes stone.",
+    body: "Rammed red earth, honed sandstone and fluted oak give the drawing weight, texture, and thermal mass.",
+  },
+  {
+    label: "The Light",
+    title: "Light is the final material.",
+    body: "Glazed courtyards and shaded verandas are tuned until the afternoon sun arrives softly, never harshly.",
+  },
+  {
+    label: "The Life",
+    title: "And finally, it is lived in.",
+    body: "A home is complete only when it holds Sunday afternoons, long conversations, and quiet mornings.",
+  },
+];
+
+export const stats = [
+  { value: 18, suffix: "", label: "Homes & spaces completed" },
+  { value: 8, suffix: "", label: "Years of quiet practice" },
+  { value: 42, suffix: "", label: "Master artisans in our circle" },
+  { value: 4, suffix: "°C", label: "Cooler, by passive design alone" },
+];

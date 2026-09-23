@@ -3,6 +3,8 @@ import PageHero from "@/components/PageHero";
 import ContactCta from "@/components/ContactCta";
 import Studio from "@/components/sections/Studio";
 import Process from "@/components/sections/Process";
+import Manifesto from "@/components/story/Manifesto";
+import DayOfLight from "@/components/story/DayOfLight";
 import Testimonial from "@/components/sections/Testimonial";
 import Vignettes from "@/components/sections/Vignettes";
 import { IMAGES } from "@/lib/data";
@@ -21,6 +23,8 @@ export default function StudioPage() {
         crumb={[{ href: "/studio", label: "Studio" }]}
       />
       <Studio />
+      <Manifesto />
+      <DayOfLight />
       <Process />
       <Testimonial />
       <Vignettes />
