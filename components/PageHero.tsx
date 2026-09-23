@@ -48,10 +48,17 @@ export default function PageHero({
           <span className="text-label-sm tracking-[0.2em] text-secondary-fixed uppercase">{kicker}</span>
         </div>
         <h1 data-hero-split data-anim-hide className="mb-6 max-w-4xl font-serif text-display-mobile tracking-tight text-surface-bright lg:text-display">
-          {title} {accent && <span className="text-secondary-fixed italic">{accent}</span>}
+          <span data-split-part>{title}</span>{" "}
+          {accent && (
+            <span className="inline-block text-secondary-fixed italic">
+              <span data-split-accent className="brass-shimmer pr-[0.12em]">
+                {accent}
+              </span>
+            </span>
+          )}
         </h1>
         <span data-hero-line className="mb-6 block h-px w-24 bg-secondary-fixed/60" />
-        <p data-hero-item data-anim-hide className="max-w-2xl text-body-md leading-relaxed text-surface-container-high md:text-body-lg">{description}</p>
+        <p data-hero-lines data-anim-hide className="max-w-2xl text-body-md leading-relaxed text-surface-container-high md:text-body-lg">{description}</p>
       </div>
     </section>
   );

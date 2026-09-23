@@ -37,6 +37,8 @@ export function initAnimations(root: HTMLElement) {
         gsap.set(q("[data-curtain]"), { autoAlpha: 0 });
         gsap.set(q("[data-bp]"), { strokeDashoffset: 0 });
         gsap.set(q("[data-bp-wrap]"), { opacity: 0.3 });
+        // background films hold on their poster frame
+        q<HTMLVideoElement>("video[autoplay]").forEach((v) => v.pause());
         storyReduced(root);
         return;
       }
@@ -44,7 +46,7 @@ export function initAnimations(root: HTMLElement) {
       // pinned story chapters first, so later triggers account for their pin spacing
       initStory(root, Boolean(ctx.conditions?.desktop));
 
-      q("[data-hero]").forEach(heroIntro);
+      q("[data-hero]").forEach((hero) => heroIntro(hero, ctx));
 
       q("[data-split]").forEach((el) => {
         const split = SplitText.create(el, { type: "words", mask: "words" });
@@ -235,7 +237,15 @@ export function initAnimations(root: HTMLElement) {
   return () => mm.revert();
 }
 
-function heroIntro(hero: HTMLElement) {
+/**
+ * The brass glint clips a gradient to the text; while letters are split and moving that clip would leave a
+ * ghost of the resting word, so the shimmer is paused for the duration of each letter animation.
+ */
+const SHIMMER = "brass-shimmer";
+const pauseShimmer = (el: HTMLElement) => el.classList.remove(SHIMMER);
+const resumeShimmer = (el: HTMLElement) => el.classList.add(SHIMMER);
+
+function heroIntro(hero: HTMLElement, ctx: gsap.Context) {
   const $ = (sel: string) => Array.from(hero.querySelectorAll<HTMLElement>(sel));
   const blueprint = $("[data-bp]");
   const openAt = blueprint.length ? 1.2 : 0.15;
@@ -265,11 +275,100 @@ function heroIntro(hero: HTMLElement) {
 
   $("[data-hero-split]").forEach((h) => {
     gsap.set(h, { autoAlpha: 1 });
-    const split = SplitText.create(h, { type: "words", mask: "words" });
-    tl.from(split.words, { yPercent: 115, duration: 1.2, stagger: 0.08, ease: "power4.out" }, openAt + 0.5);
+
+    // headline letters rise from behind a masked line, each with a slight lean
+    h.querySelectorAll<HTMLElement>("[data-split-part]").forEach((part) => {
+      const split = SplitText.create(part, { type: "words,chars", mask: "words" });
+      tl.from(
+        split.chars,
+        { yPercent: 120, rotate: 8, duration: 1.1, stagger: 0.035, ease: "power4.out", onComplete: () => split.revert() },
+        openAt + 0.5,
+      );
+    });
+
+    // the gold phrase is written in like ink bleeding into paper
+    h.querySelectorAll<HTMLElement>("[data-split-accent]").forEach((accent) => {
+      pauseShimmer(accent);
+      const split = SplitText.create(accent, { type: "chars" });
+      tl.from(
+        split.chars,
+        {
+          autoAlpha: 0,
+          y: 18,
+          filter: "blur(12px)",
+          duration: 0.9,
+          stagger: 0.055,
+          ease: "power2.out",
+          onComplete: () => {
+            split.revert();
+            resumeShimmer(accent);
+          },
+        },
+        openAt + 0.95,
+      );
+    });
+  });
+
+  // paragraph rises line by line from behind a mask
+  $("[data-hero-lines]").forEach((p) => {
+    gsap.set(p, { autoAlpha: 1 });
+    const split = SplitText.create(p, { type: "lines", mask: "lines" });
+    tl.from(split.lines, { yPercent: 105, duration: 1, stagger: 0.12, onComplete: () => split.revert() }, openAt + 1.05);
   });
 
   tl.fromTo($("[data-hero-item]"), { autoAlpha: 0, y: 24 }, { autoAlpha: 1, y: 0, duration: 0.9, stagger: 0.1 }, openAt + 0.9);
+
+  // site coordinates settle like a surveyor's readout
+  $("[data-scramble]").forEach((el, i) => {
+    tl.to(
+      el,
+      { duration: 1.8, scrambleText: { text: el.textContent ?? "", chars: "0123456789", revealDelay: 0.5, speed: 0.6 }, ease: "none" },
+      openAt + 0.85 + i * 0.15,
+    );
+  });
+
+  // once the intro settles, the phrase keeps turning: spaces that tell stories, hold light, age gracefully…
+  $("[data-rotator]").forEach((rot) => {
+    const target = rot.querySelector<HTMLElement>("[data-split-accent]");
+    const words = (rot.dataset.rotatorWords ?? "").split("|").filter(Boolean);
+    if (!target || words.length < 2) return;
+    let i = 0;
+    const cycle = () =>
+      ctx.add(() => {
+        pauseShimmer(target);
+        const out = SplitText.create(target, { type: "chars" });
+        gsap.to(out.chars, {
+          yPercent: -90,
+          rotateX: 80,
+          autoAlpha: 0,
+          duration: 0.45,
+          stagger: 0.025,
+          ease: "power2.in",
+          onComplete: () =>
+            ctx.add(() => {
+              out.revert();
+              i = (i + 1) % words.length;
+              target.textContent = words[i];
+              const next = SplitText.create(target, { type: "chars" });
+              gsap.from(next.chars, {
+                yPercent: 90,
+                rotateX: -80,
+                autoAlpha: 0,
+                duration: 0.75,
+                stagger: 0.035,
+                ease: "power3.out",
+                onComplete: () =>
+                  ctx.add(() => {
+                    next.revert();
+                    resumeShimmer(target);
+                    gsap.delayedCall(3.2, cycle);
+                  }),
+              });
+            }),
+        });
+      });
+    tl.call(() => ctx.add(() => gsap.delayedCall(2.6, cycle)));
+  });
 
   // the blueprint recedes into a faint watermark
   if (blueprint.length) tl.to($("[data-bp-wrap]"), { opacity: 0.3, duration: 1.4, ease: "power1.inOut" }, openAt + 1.4);

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Icon from "../Icon";
-import { Img, gutters } from "../ui";
+import { gutters } from "../ui";
 import { Blueprint, Curtains, Sunbeam } from "../HeroDecor";
 import { IMAGES } from "@/lib/data";
 
@@ -11,12 +11,18 @@ export default function Hero() {
       className={`relative -mt-20 flex min-h-[660px] w-full flex-col justify-end overflow-hidden bg-primary pt-28 pb-12 text-on-primary md:justify-between md:pb-10 lg:-mt-24 lg:min-h-[942px] lg:pt-32 ${gutters}`}
     >
       <div className="absolute inset-0 z-0">
-        <Img
-          src={IMAGES.livingSalon}
-          alt="Double-height living salon with travertine walls, sandstone slab art, teak lounge chairs and sheer linen drapes"
-          className="scale-105 opacity-60 mix-blend-luminosity"
-          loading="eager"
+        {/* Silent background film; the living-salon still shows while it loads */}
+        <video
           data-hero-img
+          className="h-full w-full scale-105 object-cover object-center opacity-70"
+          src="/images/mp4.mp4"
+          poster={IMAGES.livingSalon}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/30" />
         <Sunbeam />
@@ -34,7 +40,9 @@ export default function Hero() {
           </span>
         </div>
         <div className="hidden items-center gap-6 text-label-sm tracking-widest text-surface-variant uppercase lg:flex">
-          <span>Folio Vol. VIII</span>
+          <span>
+            Folio Vol. <span data-scramble>VIII</span>
+          </span>
           <span>·</span>
           <span>Private Residential &amp; Monograph Editions</span>
         </div>
@@ -48,9 +56,18 @@ export default function Hero() {
           </span>
         </div>
         <h1 data-hero-split data-anim-hide className="mb-4 font-serif text-display-mobile tracking-tight text-surface-bright md:mb-8 md:text-headline-lg lg:text-display lg:leading-[1.08]">
-          Spaces That <span className="text-secondary-fixed italic">Tell Stories.</span>
+          <span data-split-part>Spaces That</span>{" "}
+          <span
+            data-rotator
+            data-rotator-words="Tell Stories.|Hold Light.|Age Gracefully.|Feel Like Home."
+            className="inline-block text-secondary-fixed italic [perspective:600px]"
+          >
+            <span data-split-accent className="brass-shimmer pr-[0.12em]">
+              Tell Stories.
+            </span>
+          </span>
         </h1>
-        <p data-hero-item data-anim-hide className="mb-8 max-w-2xl text-body-md leading-relaxed text-surface-container-high md:mb-12 md:text-body-lg">
+        <p data-hero-lines data-anim-hide className="mb-8 max-w-2xl text-body-md leading-relaxed text-surface-container-high md:mb-12 md:text-body-lg">
           We orchestrate considered interior architecture where geological materiality, silent proportions, deep light,
           and everyday Indian life converge into enduring calm.
         </p>
@@ -82,11 +99,15 @@ export default function Hero() {
         <div className="flex items-center gap-8">
           <div className="flex items-center gap-2">
             <span className="text-secondary-fixed">LOC.01</span>
-            <span>Ahmedabad Studio: 23.0225° N, 72.5714° E</span>
+            <span>
+              Ahmedabad Studio: <span data-scramble>23.0225° N, 72.5714° E</span>
+            </span>
           </div>
           <div className="hidden items-center gap-2 lg:flex">
             <span className="text-secondary-fixed">LOC.02</span>
-            <span>Mumbai Practice: 19.0760° N, 72.8777° E</span>
+            <span>
+              Mumbai Practice: <span data-scramble>19.0760° N, 72.8777° E</span>
+            </span>
           </div>
         </div>
         <a href="#featured" className="flex items-center gap-3 hover:text-secondary-fixed">

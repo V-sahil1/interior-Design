@@ -138,3 +138,26 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: hidden;
 }
+
+/* Gold type catching light like polished brass: a soft glint sweeps across every few seconds */
+.brass-shimmer {
+  background: linear-gradient(100deg, #fddfa9 0%, #fddfa9 38%, #fff8ea 50%, #fddfa9 62%, #fddfa9 100%) 0 0 / 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: brass-glint 6s ease-in-out 3.5s infinite;
+}
+@keyframes brass-glint {
+  0%,
+  55% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brass-shimmer {
+    animation: none;
+  }
+}
