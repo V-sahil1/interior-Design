@@ -43,7 +43,7 @@ export default function FeaturedProject() {
               Quiet Transitions in Rammed Earth &amp; Living Courtyards
             </h2>
             {p.narrative.map((t) => (
-              <p data-reveal key={t} className="text-body-md leading-relaxed text-on-surface-variant">
+              <p data-lines key={t} className="text-body-md leading-relaxed text-on-surface-variant">
                 {t}
               </p>
             ))}

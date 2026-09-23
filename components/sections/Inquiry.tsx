@@ -55,7 +55,7 @@ export default function Inquiry() {
     <section id="commission-inquiry" className={`w-full scroll-mt-24 bg-primary text-on-primary ${gutters} ${sectionY}`}>
       <div className="mx-auto max-w-5xl">
         <div className="mx-auto mb-10 max-w-2xl md:mb-16 md:text-center">
-          <span className="mb-3 block text-label-sm font-semibold tracking-[0.25em] text-secondary-fixed uppercase">
+          <span data-type className="mb-3 block text-label-sm font-semibold tracking-[0.25em] text-secondary-fixed uppercase">
             Private Commission Intake
           </span>
           <h2 data-split className="mb-4 font-serif text-headline-lg-mobile text-surface-bright md:text-headline-lg">

@@ -7,7 +7,7 @@ export const sectionY = "py-12 md:py-space-xl";
 
 export function Kicker({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
-    <span data-reveal className={`mb-2 block text-label-sm font-semibold tracking-[0.2em] text-secondary uppercase ${className}`}>
+    <span data-type className={`mb-2 block text-label-sm font-semibold tracking-[0.2em] text-secondary uppercase ${className}`}>
       {children}
     </span>
   );

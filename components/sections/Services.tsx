@@ -58,7 +58,7 @@ export default function Services() {
               <Kicker>Disciplines &amp; Scope</Kicker>
               <SectionTitle>What We Do</SectionTitle>
             </div>
-            <p data-reveal className="max-w-md text-body-md text-on-surface-variant">
+            <p data-lines className="max-w-md text-body-md text-on-surface-variant">
               An integrated spatial practice navigating from foundational structural interventions down to the final
               artisanal ceramic vessel.
             </p>

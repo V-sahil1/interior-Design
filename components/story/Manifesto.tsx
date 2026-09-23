@@ -6,7 +6,7 @@ export default function Manifesto() {
   return (
     <section data-story-manifesto className={`relative flex min-h-[100svh] w-full items-center bg-background py-20 ${gutters}`}>
       <div className="mx-auto w-full max-w-6xl">
-        <span className="mb-6 block text-label-sm font-semibold tracking-[0.2em] text-secondary uppercase md:mb-10">
+        <span data-type className="mb-6 block text-label-sm font-semibold tracking-[0.2em] text-secondary uppercase md:mb-10">
           Our Manifesto
         </span>
         <p data-fill className="font-serif text-[30px] leading-[1.25] text-primary md:text-[44px] lg:text-[58px] lg:leading-[1.18]">

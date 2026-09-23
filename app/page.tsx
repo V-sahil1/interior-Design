@@ -9,6 +9,7 @@ import Journal from "@/components/sections/Journal";
 import Testimonial from "@/components/sections/Testimonial";
 import Inquiry from "@/components/sections/Inquiry";
 import Vignettes from "@/components/sections/Vignettes";
+import Marquee from "@/components/sections/Marquee";
 import BlueprintStory from "@/components/story/BlueprintStory";
 import Manifesto from "@/components/story/Manifesto";
 import DayOfLight from "@/components/story/DayOfLight";
@@ -29,6 +30,7 @@ export default function Home() {
       <div data-chapter="Manifesto">
         <Manifesto />
       </div>
+      <Marquee />
       <div data-chapter="Selected Works">
         <SelectedWorks />
       </div>

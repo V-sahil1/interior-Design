@@ -10,7 +10,7 @@ export default function Materiality() {
         <div className="mb-10 max-w-3xl md:mb-16">
           <Kicker>Tectonic Spec Archive</Kicker>
           <SectionTitle className="mb-4 leading-tight">Materiality &amp; Tectonic Anatomy</SectionTitle>
-          <p data-reveal className="text-body-md text-on-surface-variant md:text-body-lg">
+          <p data-lines className="text-body-md text-on-surface-variant md:text-body-lg">
             Our design philosophy is anchored in regional geologies and honest patinas that age gracefully in the South
             Asian climate. We test, age, and curate every sample in our physical workshop.
           </p>

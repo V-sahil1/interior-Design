@@ -27,14 +27,14 @@ export default function Studio() {
 
           <div className="flex flex-col justify-center space-y-8 lg:col-span-6 lg:pl-10">
             <div>
-              <span className="mb-3 block text-label-sm font-semibold tracking-[0.25em] text-secondary-fixed uppercase">
+              <span data-type className="mb-3 block text-label-sm font-semibold tracking-[0.25em] text-secondary-fixed uppercase">
                 The Studio · Ahmedabad &amp; Mumbai
               </span>
               <h2 data-split className="font-serif text-headline-lg-mobile leading-[1.1] text-surface-bright md:text-headline-lg lg:text-display">
                 “We Design How People Live.”
               </h2>
             </div>
-            <p data-reveal className="text-body-md leading-relaxed text-surface-container-high md:text-body-lg">
+            <p data-lines className="text-body-md leading-relaxed text-surface-container-high md:text-body-lg">
               We believe exceptional interiors are never defined by fleeting trends. They are born of disciplined
               proportions, honest materials that gain character with age, natural ventilation, and deep intimacy with the
               people who inhabit them.

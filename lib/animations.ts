@@ -11,6 +11,10 @@ import { initStory, storyReduced } from "./story";
  *                       image revealed like a sliding wall panel / pocket door
  *  data-tiles           children laid down like stone tiles (3D rotate from the top edge)
  *  data-split           heading words rise from behind a masked "reveal" line
+ *  data-lines           paragraph lines rise from behind a mask
+ *  data-type            label text decodes letter by letter (scramble)
+ *  data-marquee="left|right"
+ *                       kinetic type band that loops and surges with scroll velocity
  *  data-reveal          quiet fade-up
  *  data-reveal-stagger  children fade-up in sequence
  *  data-rule            hairline drawn left→right like a ruler stroke
@@ -56,6 +60,57 @@ export function initAnimations(root: HTMLElement) {
           stagger: 0.06,
           ease: "power4.out",
           scrollTrigger: { trigger: el, start: "top 88%", once: true },
+        });
+      });
+
+      // paragraphs rise line by line from behind a mask; autoSplit re-flows the lines on resize
+      q("[data-lines]").forEach((el) => {
+        SplitText.create(el, {
+          type: "lines",
+          mask: "lines",
+          autoSplit: true,
+          onSplit: (self) =>
+            gsap.from(self.lines, {
+              yPercent: 105,
+              duration: 1.1,
+              stagger: 0.1,
+              ease: "power4.out",
+              scrollTrigger: { trigger: el, start: "top 88%", once: true },
+            }),
+        });
+      });
+
+      // small labels decode letter by letter, like a draughtsman's stencil settling
+      q("[data-type]").forEach((el) => {
+        const text = el.textContent ?? "";
+        gsap
+          .timeline({ scrollTrigger: { trigger: el, start: "top 92%", once: true } })
+          .from(el, { autoAlpha: 0, duration: 0.3 })
+          .to(el, { duration: 1.2, scrambleText: { text, chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ", revealDelay: 0.2, speed: 0.5 }, ease: "none" }, 0);
+      });
+
+      // kinetic type band: an endless loop that surges with scroll velocity, then eases back
+      q("[data-marquee]").forEach((row) => {
+        const track = row.firstElementChild as HTMLElement | null;
+        if (!track) return;
+        const reverse = row.dataset.marquee === "right";
+        const loop = gsap.fromTo(
+          track,
+          { xPercent: reverse ? -50 : 0 },
+          { xPercent: reverse ? 0 : -50, duration: Number(row.dataset.speed) || 40, ease: "none", repeat: -1 },
+        );
+        ScrollTrigger.create({
+          trigger: row,
+          start: "top bottom",
+          end: "bottom top",
+          onUpdate: (self) => {
+            const boost = 1 + Math.min(Math.abs(self.getVelocity()) / 300, 6);
+            gsap.killTweensOf(loop);
+            gsap
+              .timeline()
+              .to(loop, { timeScale: boost, duration: 0.25, ease: "power2.out" })
+              .to(loop, { timeScale: 1, duration: 1.4, ease: "power2.out" });
+          },
         });
       });
 
