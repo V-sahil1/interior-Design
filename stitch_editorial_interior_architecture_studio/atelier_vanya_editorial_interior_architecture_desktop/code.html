@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#221a13", "tertiary": "#1e1d10", "inverse-on-surface": "#f3f0ea", "on-primary": "#ffffff", "on-secondary-fixed": "#261900", "outline-variant": "#d0c4bc", "background": "#fcf9f3", "outline": "#7f756e", "inverse-surface": "#31312d", "on-tertiary-container": "#9d9a87", "on-surface-variant": "#4d453f", "on-primary-fixed-variant": "#50453c", "tertiary-container": "#333223", "on-tertiary-fixed": "#1d1c0f", "tertiary-fixed": "#e7e3cd", "secondary": "#715b31", "error-container": "#ffdad6", "secondary-fixed": "#fddfa9", "on-tertiary": "#ffffff", "primary-fixed": "#f1dfd3", "surface-container-high": "#ebe8e2", "on-secondary": "#ffffff", "on-secondary-container": "#776136", "on-surface": "#1c1c18", "secondary-container": "#fddfa9", "on-background": "#1c1c18", "primary-fixed-dim": "#d4c3b8", "on-primary-container": "#a6978d", "surface-bright": "#fcf9f3", "tertiary-fixed-dim": "#cac7b2", "surface-container-highest": "#e5e2dc", "surface": "#fcf9f3", "surface-container-low": "#f6f3ed", "on-tertiary-fixed-variant": "#494737", "surface-variant": "#e5e2dc", "surface-container": "#f0eee8", "error": "#ba1a1a", "primary": "#241b14", "on-secondary-fixed-variant": "#57441c", "on-error": "#ffffff", "surface-tint": "#685c53", "primary-container": "#3a3028", "on-error-container": "#93000a", "inverse-primary": "#d4c3b8", "surface-container-lowest": "#ffffff", "secondary-fixed-dim": "dfc390", "surface-dim": "#dcdad4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "4rem", "space-sm": "0.75rem", "space-lg": "2.5rem", "space-xs": "0.375rem", "space-md": "1.5rem", "margin": "3rem", "gutter": "2rem" }, "fontFamily": { "headline-lg": [ "Playfair Display" ], "label-sm": [ "Manrope" ], "display": [ "Playfair Display" ], "body-sm": [ "Manrope" ], "display-mobile": [ "Playfair Display" ], "headline-md-mobile": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ], "body-md": [ "Manrope" ], "headline-sm": [ "Playfair Display" ], "body-lg": [ "Manrope" ], "label-lg": [ "Manrope" ], "label-md": [ "Manrope" ] }, "fontSize": { "headline-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.015em", "fontWeight": "400" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "500" } ], "display": [ "64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "20px", "fontWeight": "400" } ], "display-mobile": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-md-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-sm": [ "24px", { "lineHeight": "32px", "fontWeight": "400" } ], "body-lg": [ "18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "label-md": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-24 w-full px-8 lg:px-margin flex items-center justify-between"><div class="flex flex-col"><a class="font-headline-sm text-headline-sm text-primary tracking-tight font-normal" data-path="selected-works" href="#">ATELIER VANYA</a><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Interior Architecture &amp; Spatial Design</span></div><nav class="hidden xl:flex items-center gap-8" data-active-classes="text-primary font-semibold underline underline-offset-8 decoration-secondary"><a aria-current="page" class="uppercase tracking-wider transition-colors text-primary font-semibold underline underline-offset-8 decoration-secondary" data-path="selected-works" href="#">Selected Works</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="studio" href="#">Studio</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Services</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="process" href="#">Process</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="materiality" href="#">Materiality</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="journal" href="#">Journal</a><a class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-6"><div class="hidden lg:flex flex-col text-right"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Private Inquiries</span><a class="font-body-sm text-body-sm text-primary hover:text-secondary transition-colors" href="tel:+917926850123">+91 79 2685 0123</a></div><a class="bg-primary-container text-on-primary font-label-lg text-label-lg uppercase tracking-wider px-6 py-3 hover:bg-primary transition-colors flex items-center gap-2" data-path="project-inquiry" href="#"><span>Start a Project</span><span class="text-secondary">→</span></a><div class="flex items-center pl-2"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHecSw2zpJJaMKVdEyHbZ_HWS4yoxVoeJyU9kgh0CZDSwosIv9FxO3LcbQu3zDNDls3TOWzc9lhno6nywPCa71hIr2DA9TdPMKPuUGGoMsBRsdNslF3TDnDVm4_mCb0lEdXBUd2XKH6D8pyG0fyq9ZB6QZxrdHjmgmA2iN2qx4gxEKXsq6T2TVSvf3MqH5LPkGfDVC9qlJojTBPoFZr2JAFR2LRa7nrv64fzpNrYNxi5dIAHI-GNaw"/></div></div></div></header><main class="w-full pt-24 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- ==========================================
+       1. CINEMATIC HERO (DESKTOP WIDE EDITORIAL)
+       ========================================== -->
+<section class="relative w-full min-h-[942px] flex flex-col justify-between overflow-hidden bg-primary text-on-primary -mt-24 pt-32 pb-10 px-8 lg:px-margin">
+<!-- Atmospheric Architectural Backdrop Image -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity scale-105 transform hover:scale-100 transition-transform duration-1000 ease-out" data-alt="Sunlit minimalist double-height architectural living salon with soaring natural travertine walls, rough-chiseled sandstone monolithic slab wall art, custom low-slung teak platform lounge chairs with oatmeal linen cushions, sheer floor-to-ceiling sand drapes diffusing warm afternoon sunlight, a fiddle leaf fig in terracotta amphora, and polished limestone floor in serene earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp_novWfwUvGg__cB6WuH-JHYNzD1evly_QgOQKi5o21gwGSNsTCUsRq5pTkVRCq_8IoU9jmNBzGcX3VU4EEXVcVAok00UcOFnDztcOOdw82xPV2APDI7H9Xkal2a0hf5TpMNdWoSOlMYOI5OcXNdwdcAVKSgH4owdcto-2bjwqmlLu-wYExVuej74bu0KthSiYyINcr8yiFxhjw3ufk3BA1RIiwkt5eKqd5TbLQarUDS-FCG3a_pP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/30"></div>
+</div>
+<!-- Top Floating Kicker & Geographic Tag -->
+<div class="relative z-10 w-full flex items-center justify-between border-b border-outline-variant/20 pb-6">
+<div class="flex items-center gap-3">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-surface-variant">Interior Architecture &amp; Bespoke Spatial Practice · Est. 2018</span>
+</div>
+<div class="hidden md:flex items-center gap-6 font-label-sm text-label-sm text-surface-variant uppercase tracking-widest">
+<span>Folio Vol. VIII</span>
+<span>·</span>
+<span>Private Residential &amp; Monograph Editions</span>
+</div>
+</div>
+<!-- Central Hero Headline & Editorial Subtitle -->
+<div class="relative z-10 max-w-5xl py-12 lg:py-20">
+<h1 class="font-display text-display text-surface-bright font-normal leading-[1.08] tracking-tight mb-8">
+        Spaces That <span class="italic font-normal font-serif text-secondary-fixed">Tell Stories.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-container-high max-w-2xl font-light leading-relaxed mb-12">
+        We orchestrate considered interior architecture where geological materiality, silent proportions, deep light, and everyday Indian life converge into enduring calm.
+      </p>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-6">
+<a class="bg-surface-bright text-primary font-label-lg text-label-lg uppercase tracking-widest px-8 py-4 transition-all duration-300 hover:bg-secondary-fixed hover:text-on-secondary-fixed shadow-md flex items-center gap-3" href="#selected-works">
+<span>Explore Works (18 Projects)</span>
+<span class="material-symbols-outlined text-[18px]">south</span>
+</a>
+<a class="bg-transparent border border-surface-container-high/40 text-surface-bright font-label-lg text-label-lg uppercase tracking-widest px-8 py-4 transition-all duration-300 hover:bg-surface-container-high/10 flex items-center gap-3" href="#commission-inquiry">
+<span>Request Consultation</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Bottom Architectural Coordinates Bar -->
+<div class="relative z-10 w-full pt-6 border-t border-outline-variant/20 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 font-label-sm text-label-sm text-surface-variant uppercase tracking-widest">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2">
+<span class="text-secondary-fixed">LOC.01</span>
+<span>Ahmedabad Studio: 23.0225° N, 72.5714° E</span>
+</div>
+<div class="hidden lg:flex items-center gap-2">
+<span class="text-secondary-fixed">LOC.02</span>
+<span>Mumbai Practice: 19.0760° N, 72.8777° E</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span>Scroll to Explore</span>
+<span class="material-symbols-outlined animate-bounce text-sm">expand_more</span>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       2. FEATURED ARCHITECTURAL ESSAY (THE EARTH HOUSE)
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-background">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left: Monumental Image Monograph Plate -->
+<div class="lg:col-span-7 relative group">
+<div class="relative overflow-hidden bg-surface-container aspect-[4/3] shadow-xl">
+<img class="w-full h-full object-cover transform group-hover:scale-[1.02] transition-transform duration-700 ease-out" data-alt="Sun-drenched architectural villa interior with rammed earth sand-colored rammed earth walls, framed glass courtyard doors leading to an inner reflecting pond with tropical palm fronds, natural polished micro-cement flooring, a low curved bouclé sofa, and bespoke slatted natural oak credenza with brass hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUUlyZDlW_wNU-Het8RX1BZW0qYbRb5pcaJQMYphYNxm5jJ90O753mcpK1dPwCyBP9lHLr6FhsWi49BckfaawFLJq0aNt7Y-SnNh-AZ29TB8_b_0dSgwI1DuccADnJHVxky0AhpyELbDqYiu3BvhWGc90bbfMqyYsq0EmpGxxeDDIoFxLF7mmI8mCHplfNCFuOBa2YROMZVkSFhPcyXvIj0pP4OTcxjafOhbRSQ8CAxAwoC3ixjSYd"/>
+<!-- Floating Architectural Badge -->
+<div class="absolute bottom-6 left-6 bg-surface-bright/95 backdrop-blur-sm px-5 py-3 shadow-sm border border-outline-variant/30 flex items-center gap-3">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">The Earth House — Residential 4,200 sq.ft.</span>
+</div>
+</div>
+<!-- Architectural Scale & Orientation Accent -->
+<div class="hidden xl:block absolute -right-6 top-1/2 -translate-y-1/2 [writing-mode:vertical-rl] font-label-sm text-label-sm uppercase tracking-[0.25em] text-outline opacity-60">
+            Monograph Series · Plate 084 / Gujarat
+          </div>
+</div>
+<!-- Right: Case Study Architectural Narrative -->
+<div class="lg:col-span-5 flex flex-col justify-center space-y-6 lg:pl-6">
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary font-semibold">Featured Monograph / 01</span>
+<span class="w-8 h-[1px] bg-secondary/40"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-normal leading-tight">
+            Quiet Transitions in Rammed Earth &amp; Living Courtyards
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed font-light">
+            Commissioned as a secluded multi-generational retreat on Ahmedabad’s western periphery, The Earth House orchestrates thermal self-sufficiency through 450mm rammed local red earth walls, shaded interior verandas, and fluted white oak joinery.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed font-light">
+            Every room opens onto water reflection courtyards that draw south-westerly breezes through slaked-lime corridors, maintaining natural passive cooling without visual friction.
+          </p>
+<!-- Technical Spec Matrix -->
+<div class="grid grid-cols-2 gap-4 py-6 border-y border-outline-variant/30 my-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Typology</span>
+<span class="font-body-md text-body-md text-primary font-medium">Private Sanctuary Villa</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Location</span>
+<span class="font-body-md text-body-md text-primary font-medium">Ahmedabad, Gujarat</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Scope</span>
+<span class="font-body-md text-body-md text-primary font-medium">Interior Architecture &amp; Custom FF&amp;E</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block mb-1">Completed</span>
+<span class="font-body-md text-body-md text-primary font-medium">Spring 2026</span>
+</div>
+</div>
+<div>
+<a class="inline-flex items-center gap-3 font-label-lg text-label-lg uppercase tracking-wider text-primary group border-b border-secondary pb-1 hover:text-secondary transition-colors" href="#selected-works">
+<span>Explore Complete Case Study &amp; Drawing Folio</span>
+<span class="material-symbols-outlined text-sm transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       3. SELECTED WORKS (ASYMMETRIC EDITORIAL PORTFOLIO GRID)
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-surface-container-low" id="selected-works">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header with Category Filter -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-outline-variant/40 gap-8">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary block mb-2 font-semibold">Portfolio Directory</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-normal">Selected Works</h2>
+</div>
+<!-- Filter Buttons -->
+<div class="flex flex-wrap items-center gap-2 lg:gap-3" id="portfolio-filters">
+<button class="portfolio-filter-btn px-4 py-2 font-label-sm text-label-sm uppercase tracking-widest bg-primary text-on-primary transition-colors" data-filter="all">
+            All Works (18)
+          </button>
+<button class="portfolio-filter-btn px-4 py-2 font-label-sm text-label-sm uppercase tracking-widest bg-surface-bright text-on-surface-variant hover:text-primary transition-colors border border-outline-variant/30" data-filter="residential">
+            Residential
+          </button>
+<button class="portfolio-filter-btn px-4 py-2 font-label-sm text-label-sm uppercase tracking-widest bg-surface-bright text-on-surface-variant hover:text-primary transition-colors border border-outline-variant/30" data-filter="commercial">
+            Commercial &amp; Studios
+          </button>
+<button class="portfolio-filter-btn px-4 py-2 font-label-sm text-label-sm uppercase tracking-widest bg-surface-bright text-on-surface-variant hover:text-primary transition-colors border border-outline-variant/30" data-filter="retreat">
+            Retreats &amp; Hospitality
+          </button>
+</div>
+</div>
+<!-- Asymmetric Editorial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Card 01: 70% Spanning Panoramic Residential -->
+<div class="md:col-span-8 group cursor-pointer" data-category="residential">
+<div class="relative overflow-hidden bg-surface aspect-[16/10] mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Modernist Indian courtyard villa interior featuring warm rammed earth walls, low profile curved cream sofa, natural jute weave rug, polished concrete floors, and courtyard view with lush palms and water reflecting surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZk96rxysvY6df4NT-BTH4vDI990V04LuNyv9KbUexzoLJ7Xm4NfKDLCXCNbiNF1LVtt5D55kdC6fj20ERdIVjqMOuqsOqs6cUAiVrdBSjcGPQoZ_E2dTcs2jIfXaRY8oOapIBKQSzpo9PgopSpoNC0PO4a3LhodfYOE-_gz9MA4Tkq5pOQ2tizXF5pNWvrEE44WOESzN35zpXhJxE7uisZX97PURF1ut-eLP5BUg7QcTBsYnvtcz"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-surface-bright/95 text-primary font-label-sm text-label-sm uppercase tracking-widest px-5 py-3 shadow-md">View Case File</span>
+</div>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-3 py-1 uppercase tracking-wider">
+              Project 01 / Ahmedabad
+            </div>
+</div>
+<div class="flex items-baseline justify-between pt-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">The Earth House</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Rammed earth monolithic structure · Passive solar shading · 2026</p>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Residential</span>
+</div>
+</div>
+<!-- Card 02: 30% Vertical Elegant Portrait -->
+<div class="md:col-span-4 group cursor-pointer flex flex-col justify-between" data-category="residential">
+<div class="relative overflow-hidden bg-surface aspect-[3/4] mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Minimalist luxury interior foyer with tall fluted slaked lime plaster wall, hand-carved solid unpolished sandstone pedestal with minimalist bronze vessel, warm architectural ceiling light groove." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7_ahbEqmNZlr5irbKxmtkYNPKxyxMwb0FLli3Tdk3W35sJfT2Nl9MVM2_2kPtGGj_wMw13y_HuBkKd6G0RwyXsYWe358Wnug1ivEaiPuZ7CSYdZiBLNqGPg9PfnUItscOA3Fa7hJ-s2iZdnj0QsIj-HsK1XE4wcLazbxKWE9otSOLCaqwvGkdaxdQ0BgqZrKO3hTy642Da4FPSRAAsrZjhgV7PQAY1r0n8rJw0TeW-SwOxwrlTamM"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-surface-bright/95 text-primary font-label-sm text-label-sm uppercase tracking-widest px-5 py-3 shadow-md">View Case File</span>
+</div>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-3 py-1 uppercase tracking-wider">
+              Project 02 / Surat
+            </div>
+</div>
+<div class="pt-2">
+<div class="flex items-baseline justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">The Olive Residence</h3>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Private Duplex</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Fluted lime plaster, brass joinery, reclaimed teak · 2025</p>
+</div>
+</div>
+<!-- Card 03: 45% Spanning Card -->
+<div class="md:col-span-5 group cursor-pointer" data-category="retreat">
+<div class="relative overflow-hidden bg-surface aspect-[4/3] mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Inner sanctuary courtyard with restored traditional Gujarati stone arcade pillars, shallow reflecting pond, shadow play on antique stone floor, quiet minimalist teak bench in soft daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4AYi0qCCMC6g8IDXTeRFXoVhD7uxwJPqce8PooHsJPuZzXoBEroISRLJeFS-bb4es89KLtwvIvzvff5JO--dTsCh6n7FOMjQ5Ek3enzOh4z8k6iPjThqrbiKRXY6I5OO-1fCA6F85SFU2eu5rNxBlf5PHN8q_GkCgKZLalZ6t98a4LN72KdkgKoUcuEDB-7dWAIkyBe26X-Zl8biBuvcqD9ed8BXX1BthtFd6GN6vUOH80Ykr7HVK"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-surface-bright/95 text-primary font-label-sm text-label-sm uppercase tracking-widest px-5 py-3 shadow-md">View Case File</span>
+</div>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-3 py-1 uppercase tracking-wider">
+              Project 03 / Vadodara
+            </div>
+</div>
+<div class="flex items-baseline justify-between pt-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">The Courtyard Home</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Heritage stone restoration &amp; biophilic breeze channels · 2025</p>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Heritage</span>
+</div>
+</div>
+<!-- Card 04: 55% Spanning Card Commercial Studio -->
+<div class="md:col-span-7 group cursor-pointer" data-category="commercial">
+<div class="relative overflow-hidden bg-surface aspect-[16/10] mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Moody architectural boardroom with dark smoked walnut wood paneling, black veined Nero Marquina marble conference table with architectural blueprints spread out, warm sculptural brass pendant chandelier casting golden pool of light, rain-streaked tall city window, soft leather executive chairs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_rzkOE6Y_ZSEWy4M_d62y_LjWkWE49N62SwzkjXnZLcHmb-AzlgP2ScKvvRibijq43QVgWMPDg-w9cKtkENy_rOBGViv8z2URHzYJvGgw2z9-6VSPvl83rJPpbCjAUn2QISse3OvMP2LqGafWIOz2JENTcTIXURd47DrtmocAK-si2iWBnmx7MvZLaJClQ1d6elZAZTZ08qetWDu6zeRT7Dn5WjTGf2Txed53A4sAADEKJB9DtgjR"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-surface-bright/95 text-primary font-label-sm text-label-sm uppercase tracking-widest px-5 py-3 shadow-md">View Case File</span>
+</div>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-3 py-1 uppercase tracking-wider">
+              Project 04 / Mumbai
+            </div>
+</div>
+<div class="flex items-baseline justify-between pt-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">The Atelier HQ</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Dark smoked timber, Nero Marquina marble &amp; brushed bronze accents · 2024</p>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Studio HQ</span>
+</div>
+</div>
+<!-- Card 05 & 06: Balanced Symmetrical Pair -->
+<div class="md:col-span-6 group cursor-pointer" data-category="residential">
+<div class="relative overflow-hidden bg-surface aspect-[16/11] mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Sunlit minimalist dining space with massive honed travertine dining table, monolithic raw stone bench, floor-to-ceiling sheer linen curtains, minimal earthenware vessels on inset lit shelves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbsbbhE8pglU9WyB51IcELbJsvzRLTNWjO1y3npix3vX4yVn3OtwrSDezqIF3QLq3HH49uEkPpqDmwemD-rdMa8j7ecsUtTXEW9gh93kKAgRMWK2rrxJFLnIRwLxHVo9kN5_UbHkX5_M74Wfw1chWA9-YpO3yovPaXjGzr6nO1p36cyXJgBpWfGTtbev52EGTLDgHo2NrKKw2ngEznIPJvKXP97FD1FqxU1VgLvZdiJV2dGNjEUHg0"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-surface-bright/95 text-primary font-label-sm text-label-sm uppercase tracking-widest px-5 py-3 shadow-md">View Case File</span>
+</div>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-3 py-1 uppercase tracking-wider">
+              Project 05 / Bangalore
+            </div>
+</div>
+<div class="flex items-baseline justify-between pt-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">Casa Verde Penthouse</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Travertine stone masses &amp; tropical terrace integration · 2025</p>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Penthouse</span>
+</div>
+</div>
+<div class="md:col-span-6 group cursor-pointer" data-category="commercial">
+<div class="relative overflow-hidden bg-surface aspect-[16/11] mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Quiet executive private office library with floor-to-ceiling recessed smoked oak book shelving, low parchment leather reading chair, textured lime-wash ceiling, soft task lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLm1XhS2W5OpS44H5aNzV-DANMK5oyiE7oIhWmJ5j2TiILcu9s40EtuF4D5MVUAJ7AfBrhB2FHgR9Iz_XvHlzW9e2nyxwoOwJpQNJyJeoffYacsFEx30ovEupxSyc-zFHJI75gwLoJ-hamQN9ri3a2wq1a6mNTsMunZuqeaZlnL3lwRopnjxUFavUf5Jc6m208A_MpoFJZ5q64pqWrJL2N0FvwfhhCnmub4PSacHzzNpvK_dIw2fjt"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="bg-surface-bright/95 text-primary font-label-sm text-label-sm uppercase tracking-widest px-5 py-3 shadow-md">View Case File</span>
+</div>
+<div class="absolute top-4 left-4 bg-primary/80 backdrop-blur-sm text-on-primary font-label-sm text-label-sm px-3 py-1 uppercase tracking-wider">
+              Project 06 / Ahmedabad
+            </div>
+</div>
+<div class="flex items-baseline justify-between pt-2">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">The Minimalist Practice</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Oak library joinery &amp; parchment acoustics · 2024</p>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Workspace</span>
+</div>
+</div>
+</div>
+<!-- Bottom Archive View All Link -->
+<div class="text-center mt-16 pt-8 border-t border-outline-variant/30">
+<a class="inline-flex items-center gap-3 font-label-lg text-label-lg uppercase tracking-widest text-primary hover:text-secondary transition-colors" href="#commission-inquiry">
+<span>Request Complete Monograph Archive (PDF Catalogue, 140 Pages)</span>
+<span class="material-symbols-outlined text-sm">download</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       4. MATERIALITY ARCHIVE & TACTILE PALETTE
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-background">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="max-w-3xl mb-16">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary block mb-2 font-semibold">Tectonic Spec Archive</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-normal leading-tight mb-4">
+          Materiality &amp; Tectonic Anatomy
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light">
+          Our design philosophy is anchored in regional geologies and honest patinas that age gracefully in the South Asian climate. We test, age, and curate every sample in our physical workshop.
+        </p>
+</div>
+<!-- 4 Tactile Visual Swatches Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Swatch 01 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div>
+<div class="relative aspect-square overflow-hidden bg-surface-container mb-6">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Macro close-up photograph of natural honed Dholpur beige sandstone slab showing delicate mineral grains, subtle porous texture, and warm sun-baked ochre tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2WRIMrYRmtqNPxLvJuLzlshD7zMjq48h7GKiQSB4KRtpbglA_jTDmCLFihojgiLYZlUDE3EjgT0-y0QHAch0YKYe24MLUFYKLPd2XxmWcbXU78UA61RMvI1ac3pHLg_hb61iOfoJVgMmDJCzcfMJ8zCTk5Zbz0D5u-A1jvplbLkMlTc3oMhzrJiXzezPc82fcI7cVCnpvDeBxdvR2P3ZOyxD9BzyQImd4Su8AiDYxxdA_P6deP8aT"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm bg-surface-bright/90 px-2.5 py-1 uppercase tracking-wider text-primary">MAT. 01</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Natural Dholpur Sandstone</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Thermal mass substrate quarried from Rajasthan basin. Unsealed honed surface retains cool subterranean temperatures during peak subcontinental summers.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/30 flex items-center justify-between font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span>Thermal Mass</span>
+<span class="text-secondary font-semibold">Honed Finish</span>
+</div>
+</div>
+<!-- Swatch 02 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div>
+<div class="relative aspect-square overflow-hidden bg-surface-container mb-6">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Macro tactile photograph of century-old reclaimed Gujarat teak wood with rich dark caramel grain, deep wire-brushed natural oil finish, and subtle wood knots." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmVGv-4Wgy3tBzHbz9fj3-UXST6V2N0uLuefnBknkFDuA5XNkJJSVjDynX-ZZtKeUyaNCw4n62Y5arsWvq0ZuBUiI8EoNpNy_ZFC-c5vLRPGkubPm7ybp5H39kHl7QXDObTKRtdP_pxbt3wlrCUSiI-RHexfPGmRTNkd16_qgkP-qwTibeRDhyaIY71VCGPTzdf2ivml2_meGS3_U4GUUx92eCH1SDnsl4j3wUtqvCbqXzvOL4AVX1"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm bg-surface-bright/90 px-2.5 py-1 uppercase tracking-wider text-primary">MAT. 02</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Reclaimed Gujarat Teak</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Salvaged from historic pol architecture. Seasoned over 80+ years, yielding zero moisture shrinkage, rich honey-dark grain, and bespoke tactile warmth.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/30 flex items-center justify-between font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span>Salvaged 1930s</span>
+<span class="text-secondary font-semibold">Natural Linseed Oil</span>
+</div>
+</div>
+<!-- Swatch 03 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div>
+<div class="relative aspect-square overflow-hidden bg-surface-container mb-6">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Extreme macro shot of hand-troweled slaked lime plaster wall showing organic undulating micro-texture, chalky warm ivory matte finish, and soft ambient shadow gradients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQRZSyE7OPQLCoXvMPjfMX3f0Ujbq96KCBHaG3a4dYTXEbb3fu0gHYQG_vKNUBM5VxslI9WnB8Yxga4VRt5zchIRFsmHrvfMw23DckqANNoTGmpKtazNPYg4C2lIPdsqPGaPgzYI8jFXtdqm1XJjvqAJnQTGafdzL4clB6mGr8BoCcIGGnG5XskvjsHnieTnNGjFKE7V2z62LcI9N_f7uJ17nMyO3o1JxSwYr5Ps9IHAJbfczUCDVb"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm bg-surface-bright/90 px-2.5 py-1 uppercase tracking-wider text-primary">MAT. 03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Slaked Lime Plaster</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Aged slaked lime mixed with river sand and vegetable gums. Highly breathable, anti-fungal, seamless, and dampens high-frequency acoustic reflections.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/30 flex items-center justify-between font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span>Acoustic Softness</span>
+<span class="text-secondary font-semibold">Hand-Troweled</span>
+</div>
+</div>
+<!-- Swatch 04 -->
+<div class="bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div>
+<div class="relative aspect-square overflow-hidden bg-surface-container mb-6">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Detailed close up of patinated solid brass architectural hardware showing brushed directional grain, darkened bronze edges, subtle gold highlights, and raw unlacquered surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7Frahf-jXQrXVGUkjZK7mO3qnFJDFPaQ9RFdN8HT1CRAv73_XTLqvrXA0X34bdEZw9cgFVb_dOC5uvOfb4rxjO0vlr1XtWhC_IwuGvoqgtmHU_ujik3Ip96Kw3wY-b_RC4dCXLD5tXxarNQfXaTShkFa54kFeDS-Yq7WRZK2lKbhS7VKO6p4m8QqjmnGiT5HaOoOoMW8ayu3G1d0OHxWl62SDMuadhYUVXCuIFOHIFGJeHj4x1OPZ"/>
+<span class="absolute top-3 left-3 font-label-sm text-label-sm bg-surface-bright/90 px-2.5 py-1 uppercase tracking-wider text-primary">MAT. 04</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Patinated Raw Brass</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Pure unlacquered brass custom-milled for pulls, reveals, and light portals. Develops an organic, deeply personal antique patina through daily touch.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/30 flex items-center justify-between font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span>Living Metal</span>
+<span class="text-secondary font-semibold">Unlacquered 98%</span>
+</div>
+</div>
+</div>
+<!-- Detail Technical Callout Bar -->
+<div class="mt-12 bg-surface-container-high p-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary">Comprehensive Material Spec Drawer</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Access our complete CAD details, 2700K cove lighting junction specs, and stone dry-lay guidelines.</p>
+</div>
+</div>
+<a class="bg-primary text-on-primary px-6 py-3 font-label-sm text-label-sm uppercase tracking-wider hover:bg-secondary transition-colors whitespace-nowrap" href="#commission-inquiry">
+          Request Specification Folder
+        </a>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       5. WHAT WE DO (EDITORIAL PRACTICE MATRIX)
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-outline-variant/40">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary block mb-2 font-semibold">Disciplines &amp; Scope</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-normal">What We Do</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md font-light">
+          An integrated spatial practice navigating from foundational structural interventions down to the final artisanal ceramic vessel.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service 01 -->
+<div class="bg-surface-bright p-8 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-display text-headline-md text-secondary/40 font-normal">01</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Discipline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Interior Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-light">
+              Structural alignments, micro-climate sun path simulation, ceiling volumetric transitions, natural daylight portals, and envelope modifications that establish harmonious volume.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/30 flex items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<span>Spatial Massing</span>
+<span class="material-symbols-outlined text-sm">straighten</span>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="bg-surface-bright p-8 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-display text-headline-md text-secondary/40 font-normal">02</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Discipline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Interior Design &amp; Curation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-light">
+              Atmospheric moodboards, tactile finish schedules, antique architectural fragment sourcing, custom textile hand-weaves, and comprehensive FF&amp;E specification.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/30 flex items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<span>Tactile Schedules</span>
+<span class="material-symbols-outlined text-sm">palette</span>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="bg-surface-bright p-8 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-display text-headline-md text-secondary/40 font-normal">03</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Discipline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Turnkey Execution &amp; Site Governance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-light">
+              Rigid on-site supervision, artisan master-mason coordination, advanced MEP integration, zero-tolerance joinery fits, and weekly client photographic audit briefs.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/30 flex items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<span>Full Oversight</span>
+<span class="material-symbols-outlined text-sm">precision_manufacturing</span>
+</div>
+</div>
+<!-- Service 04 -->
+<div class="bg-surface-bright p-8 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-display text-headline-md text-secondary/40 font-normal">04</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Discipline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Bespoke Millwork &amp; Furniture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-light">
+              Commissioned monolithic stone dining slabs, floating timber credenzas, custom unlacquered brass hardware, and studio-designed low-slung seating typologies.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/30 flex items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<span>Custom Fabrication</span>
+<span class="material-symbols-outlined text-sm">chair</span>
+</div>
+</div>
+<!-- Service 05 -->
+<div class="bg-surface-bright p-8 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300">
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-display text-headline-md text-secondary/40 font-normal">05</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Discipline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Art Direction &amp; Sensory Styling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-light">
+              Acquisition of contemporary South Asian ceramics, site-specific canvases, olfactory architectural ambient scents, and layered private library curation.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/30 flex items-center justify-between text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<span>Gallery Curations</span>
+<span class="material-symbols-outlined text-sm">brush</span>
+</div>
+</div>
+<!-- Service 06: Private Retainer / Advisory -->
+<div class="bg-primary text-on-primary p-8 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-baseline justify-between mb-6">
+<span class="font-display text-headline-md text-secondary-fixed font-normal">06</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-surface-container-high/60">Discipline</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright mb-3">Private Architectural Advisory</h3>
+<p class="font-body-sm text-body-sm text-surface-variant leading-relaxed font-light">
+              Pre-acquisition land and property assessment, spatial feasibility analyses for legacy properties, and master planning for private collector compounds.
+            </p>
+</div>
+<div class="pt-6 mt-8 border-t border-outline-variant/20 flex items-center justify-between text-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+<span>Pre-Acquisition</span>
+<span class="material-symbols-outlined text-sm">explore</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       6. THE DESIGN PROCESS (HORIZONTAL CINEMATIC TIMELINE)
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-background">
+<div class="max-w-7xl mx-auto">
+<div class="max-w-2xl mb-16">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary block mb-2 font-semibold">Artisanal Methodology</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-normal leading-tight">
+          How We Work: The 5 Phases
+        </h2>
+</div>
+<!-- Horizontal Process Stage Pipeline -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+<!-- Step 1 -->
+<div class="flex flex-col justify-between p-6 bg-surface-container-low min-h-[300px] border-t-2 border-primary">
+<div>
+<span class="font-display text-headline-md text-primary font-normal block mb-4">01</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-2">Phase 01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Discover</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Immersion into how you move, rest, and gather. Site orientation, microclimatic sun studies, and cultural habits documentation.
+            </p>
+</div>
+<div class="pt-4 font-label-sm text-label-sm text-outline uppercase tracking-wider">
+            Weeks 01–03
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col justify-between p-6 bg-surface-container-low min-h-[300px] border-t-2 border-secondary">
+<div>
+<span class="font-display text-headline-md text-primary font-normal block mb-4">02</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-2">Phase 02</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Concept</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Volumetric diagrams, atmospheric lighting moodboards, initial clay scale models, and spatial axis definition.
+            </p>
+</div>
+<div class="pt-4 font-label-sm text-label-sm text-outline uppercase tracking-wider">
+            Weeks 04–07
+          </div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col justify-between p-6 bg-surface-container-low min-h-[300px] border-t-2 border-outline">
+<div>
+<span class="font-display text-headline-md text-primary font-normal block mb-4">03</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-2">Phase 03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Design</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Exhaustive millwork detailing, full 1:1 tactile stone &amp; plaster mockups, MEP integrations, and custom hardware engineering.
+            </p>
+</div>
+<div class="pt-4 font-label-sm text-label-sm text-outline uppercase tracking-wider">
+            Weeks 08–14
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col justify-between p-6 bg-surface-container-low min-h-[300px] border-t-2 border-primary-container">
+<div>
+<span class="font-display text-headline-md text-primary font-normal block mb-4">04</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-2">Phase 04</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Execute</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              On-site craftsmanship coordination, daily masonry tolerances governance, dry-lay stone inspection, and MEP precision fitting.
+            </p>
+</div>
+<div class="pt-4 font-label-sm text-label-sm text-outline uppercase tracking-wider">
+            Months 04–10
+          </div>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col justify-between p-6 bg-surface-container-low min-h-[300px] border-t-2 border-secondary-fixed-dim">
+<div>
+<span class="font-display text-headline-md text-primary font-normal block mb-4">05</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold block mb-2">Phase 05</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Reveal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Turnkey white-glove handover, artisanal book curation, custom signature scent diffusion, and framed architectural archive folio presentation.
+            </p>
+</div>
+<div class="pt-4 font-label-sm text-label-sm text-outline uppercase tracking-wider">
+            Handover
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       7. STUDIO ESSENCE & PHILOSOPHY
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-primary text-on-primary">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left: Dramatic Studio Mood Plate -->
+<div class="lg:col-span-6 relative">
+<div class="relative overflow-hidden bg-primary-container aspect-[4/5] shadow-2xl">
+<img class="w-full h-full object-cover opacity-90" data-alt="Intimate evening architectural studio environment with dark walnut wood walls, black marble table covered in architectural plans and brass handle samples, warm glowing brass pendant light reflecting softly on polished dark stone surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgbhU0bQNYJr51DWCpxqEzWpi7xNs5rBchs2bYwUKdtWZcImgjV6fy3uSaw58EBwfeNMX-fl3erEYqUm8IUC0JDPr3tHHzMJA_6ZSx3qyhGvW4KkMwY0w4_mpif1cDeaCg8Fc-coeJmXm1O8vgaorOMx0zOz8F0cT17mblKcCgXZAkIOtcY8jpEEhVpelzF7m_JW-5Kamk4W-n-gThIGX1jHoujbcbfeCaz1p7wzjkwMYadLLnj0SQ"/>
+<div class="absolute bottom-6 right-6 bg-surface-container-lowest/10 backdrop-blur-md px-5 py-3 border border-surface-container-highest/20 text-right">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed block">Kala Ghoda Studio Loft</span>
+<span class="font-body-sm text-body-sm text-surface-container-high font-light">Late Night Material Reviews</span>
+</div>
+</div>
+</div>
+<!-- Right: Studio Manifesto -->
+<div class="lg:col-span-6 flex flex-col justify-center lg:pl-10 space-y-8">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary-fixed block mb-3 font-semibold">The Studio · Ahmedabad &amp; Mumbai</span>
+<h2 class="font-display text-headline-lg lg:text-display text-surface-bright font-normal leading-[1.1]">
+              “We Design How People Live.”
+            </h2>
+</div>
+<p class="font-body-lg text-body-lg text-surface-container-high leading-relaxed font-light">
+            We believe exceptional interiors are never defined by fleeting trends. They are born of disciplined proportions, honest materials that gain character with age, natural ventilation, and deep intimacy with the people who inhabit them.
+          </p>
+<!-- Philosophy Keywords in Oversized Letterspaced Typography -->
+<div class="py-6 border-y border-outline-variant/20">
+<div class="flex flex-wrap items-center justify-between gap-4 font-label-md text-label-md uppercase tracking-[0.3em] text-secondary-fixed font-semibold">
+<span>Space</span>
+<span>·</span>
+<span>Light</span>
+<span>·</span>
+<span>Material</span>
+<span>·</span>
+<span>Detail</span>
+<span>·</span>
+<span>Life</span>
+</div>
+</div>
+<div class="space-y-2">
+<blockquote class="font-headline-sm text-headline-sm italic text-surface-bright font-serif">
+              “Every detail has a reason. If it does not serve peace of mind, it does not belong in the room.”
+            </blockquote>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-surface-variant">
+              — Atelier Vanya Founding Principles
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       8. THE JOURNAL (ARCHITECTURAL MONOGRAPHS)
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-background">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-outline-variant/40">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary block mb-2 font-semibold">Essays &amp; Research</span>
+<h2 class="font-headline-lg text-headline-lg text-primary font-normal">Monograph Journal</h2>
+</div>
+<a class="font-label-lg text-label-lg uppercase tracking-wider text-primary hover:text-secondary transition-colors inline-flex items-center gap-2" href="#commission-inquiry">
+<span>Read All Essays</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Article 01 -->
+<article class="flex flex-col justify-between group cursor-pointer">
+<div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Calm architectural dining room detail with deep morning sunlight filtering through wooden louvered shutters, casting linear light bars across an unpolished limestone floor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOq0lBGAedl3BLkRVDPsSxu6esq2bTOcQDxI2p6yOQFr6k0Xnw8-ErNnhbCYnWgBJ1zlt4yZYxIClFaxLB4KEasvuwBVYGlzn27vlHuf3uYNoNWolTtmeFzFwg3_G1eBbHZmyWOjxrL4U89aH1k_YL8Hb3cPb2BrHOdtuE8T1q5_15estUMMwGXsaY3aKobJrPqJIR4FLGDhVR1nAWJALcxqVkFdxqeqHKncXjs34T8UqNIgKwo_DH"/>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm uppercase tracking-widest text-outline mb-2">
+<span>Architecture</span>
+<span>·</span>
+<span>6 Min Read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors mb-2">
+              5 Principles of Timeless Indian Minimalist Design
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              How moving away from synthetic luxury toward raw stone, deep courtyards, and silent joinery redefines the contemporary Indian domestic sanctum.
+            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 font-label-sm text-label-sm uppercase tracking-wider text-primary">
+            Published Feb 2026
+          </div>
+</article>
+<!-- Article 02 -->
+<article class="flex flex-col justify-between group cursor-pointer">
+<div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Hand troweling process of textured cream lime plaster on architectural interior curved wall showing the craftsperson's wooden trowel and authentic mineral pigments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkR94-UcnCpUtA2SkEGuVZtRRQwGJGtuwTZ7qdU4erjUchzsnBlbS10Q6UdPp45fPWd3QbAtLNwmBCt8biV8JuP2FLFv3G-FoQ9TvJgPlz2kufsBDdfV_FFFdxO376wp1dpy00-2EYo6s2fHQBmuQA9oWNrQNLri6xMycGPiSGjAZmtnoVq6fBRnQbrUP4Iqr1PQZlPC3ytoqVliosvgHM4kAAra92FSwE99arz1Kmh_Ctyh4tvbkA"/>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm uppercase tracking-widest text-outline mb-2">
+<span>Materiality</span>
+<span>·</span>
+<span>8 Min Read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors mb-2">
+              How Rammed Earth &amp; Slaked Lime Plaster Transform Room Acoustics
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Evaluating the micro-porosity of natural wall finishes to eliminate synthetic foam acoustic panels and create naturally hushed spaces.
+            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 font-label-sm text-label-sm uppercase tracking-wider text-primary">
+            Published Jan 2026
+          </div>
+</article>
+<!-- Article 03 -->
+<article class="flex flex-col justify-between group cursor-pointer">
+<div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container mb-4">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Architectural western elevation with deep cantilevered stone chhajjas projecting soft shade over floor-to-ceiling glass in Ahmedabad high summer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxzl9cvJ6HdM7HivmfmEq6DAlh5pi6a7SBG9N0skS2QsAYbfQEv5bIQX-y-8o8SMx9h6ZbGaxTt7s46a6YwBf_irRCbFci-zhTUn4NQzrQL_0hYXIJti-Yu_MOUGaXTj6zmnwwpIsSQAQh-IPZT_2PCg1AblSVLruSl7YlmzeYsgzt7twABn1MVNxesn2vnr7iOROt0MoGuzoxLkJJt8UbfBCoofmjSecW8iL0DqqrYnm1hxkoBwCA"/>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm uppercase tracking-widest text-outline mb-2">
+<span>Climatic Design</span>
+<span>·</span>
+<span>5 Min Read</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors mb-2">
+              The Art of Designing Around Ahmedabad’s Harsh Western Sun
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Deploying deep stone reveals, indirect light wells, and thermal buffer zones to turn intense desert glare into contemplative ambient glow.
+            </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 font-label-sm text-label-sm uppercase tracking-wider text-primary">
+            Published Dec 2025
+          </div>
+</article>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       9. CLIENT REFLECTIONS (TESTIMONIAL STATEMENT)
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-surface-container-high">
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-8">format_quote</span>
+<blockquote class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary font-normal leading-relaxed italic mb-8">
+        “Every single detail felt intentional. The final home feels completely personal, peaceful, and timeless — a true sanctuary in the city.”
+      </blockquote>
+<div class="flex flex-col items-center">
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-primary font-semibold">Sheetal &amp; Rajesh Mehta</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">The Earth House · Ahmedabad, Gujarat</span>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       10. BESPOKE COMMISSION ENQUIRY BRIEF
+       ========================================== -->
+<section class="w-full py-space-xl px-8 lg:px-margin bg-primary text-on-primary" id="commission-inquiry">
+<div class="max-w-5xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary-fixed block mb-3 font-semibold">Private Commission Intake</span>
+<h2 class="font-display text-headline-lg text-surface-bright font-normal mb-4">
+          Let’s Create Your Space.
+        </h2>
+<p class="font-body-md text-body-md text-surface-container-high font-light leading-relaxed">
+          Have a private residence, luxury workspace, or boutique hospitality venture in mind? We welcome a limited number of select commissions each season.
+        </p>
+</div>
+<!-- Conversion Intake Module -->
+<div class="bg-surface-container-lowest text-on-surface p-8 lg:p-12 shadow-2xl">
+<form class="space-y-8" id="architectural-inquiry-form" onsubmit="event.preventDefault(); handleInquirySubmit();">
+<!-- Step 1: Typology Selector -->
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-3 font-semibold">
+              01. Project Typology
+            </label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3" id="typology-chips">
+<button class="typology-chip px-4 py-3 border border-outline-variant text-center font-label-sm text-label-sm uppercase tracking-wider transition-colors hover:border-primary active:bg-primary active:text-on-primary" data-value="Residential" type="button">
+                Private Residence
+              </button>
+<button class="typology-chip px-4 py-3 border border-outline-variant text-center font-label-sm text-label-sm uppercase tracking-wider transition-colors hover:border-primary active:bg-primary active:text-on-primary" data-value="Penthouse" type="button">
+                Penthouse / Loft
+              </button>
+<button class="typology-chip px-4 py-3 border border-outline-variant text-center font-label-sm text-label-sm uppercase tracking-wider transition-colors hover:border-primary active:bg-primary active:text-on-primary" data-value="Commercial" type="button">
+                Boutique Office
+              </button>
+<button class="typology-chip px-4 py-3 border border-outline-variant text-center font-label-sm text-label-sm uppercase tracking-wider transition-colors hover:border-primary active:bg-primary active:text-on-primary" data-value="Hospitality" type="button">
+                Retreat / Hospitality
+              </button>
+</div>
+<input id="selected-typology" type="hidden" value="Residential"/>
+</div>
+<!-- Step 2: Scale Range -->
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-3 font-semibold">
+              02. Approximate Spatial Scale
+            </label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3" id="scale-chips">
+<button class="scale-chip px-4 py-3 border border-outline-variant text-center font-label-sm text-label-sm uppercase tracking-wider transition-colors hover:border-primary" data-value="Under 2,500 sq.ft" type="button">
+                &lt; 2,500 sq.ft
+              </button>
+<button class="scale-chip px-4 py-3 border border-outline-variant text-center font-label-sm text-label-sm uppercase tracking-wider transition-colors hover:border-primary bg-primary text-on-primary" data-value="2,500 - 6,000 sq.ft" type="button">
+                2,500 – 6,000 sq.ft
+              </button>
+<button class="scale-chip px-4 py-3 border border-outline-variant text-center font-label-sm text-label-sm uppercase tracking-wider transition-colors hover:border-primary" data-value="6,000+ sq.ft" type="button">
+                6,000+ sq.ft
+              </button>
+</div>
+<input id="selected-scale" type="hidden" value="2,500 - 6,000 sq.ft"/>
+</div>
+<!-- Step 3: Location & Timeline Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-2 font-semibold">
+                03. Site Location (City, State / Country)
+              </label>
+<input class="w-full bg-surface-container-low px-4 py-3 font-body-md text-body-md text-primary outline-none focus:bg-surface-bright focus:ring-1 focus:ring-secondary placeholder:text-outline/50" placeholder="e.g. Ahmedabad, Mumbai, London" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-2 font-semibold">
+                04. Target Handover Timeline
+              </label>
+<select class="w-full bg-surface-container-low px-4 py-3 font-body-md text-body-md text-primary outline-none focus:bg-surface-bright focus:ring-1 focus:ring-secondary">
+<option value="6-9 Months">Within 6–9 Months</option>
+<option selected="" value="9-14 Months">9–14 Months</option>
+<option value="14+ Months">14+ Months (Comprehensive Estate)</option>
+</select>
+</div>
+</div>
+<!-- Step 4: Contact Information -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-2 font-semibold">
+                Your Full Name
+              </label>
+<input class="w-full bg-surface-container-low px-4 py-3 font-body-md text-body-md text-primary outline-none focus:bg-surface-bright focus:ring-1 focus:ring-secondary placeholder:text-outline/50" placeholder="Name" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-2 font-semibold">
+                Direct Email
+              </label>
+<input class="w-full bg-surface-container-low px-4 py-3 font-body-md text-body-md text-primary outline-none focus:bg-surface-bright focus:ring-1 focus:ring-secondary placeholder:text-outline/50" placeholder="email@address.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-2 font-semibold">
+                Phone / WhatsApp
+              </label>
+<input class="w-full bg-surface-container-low px-4 py-3 font-body-md text-body-md text-primary outline-none focus:bg-surface-bright focus:ring-1 focus:ring-secondary placeholder:text-outline/50" placeholder="+91 98..." required="" type="tel"/>
+</div>
+</div>
+<!-- Step 5: Narrative Overview -->
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-2 font-semibold">
+              Brief Overview of Your Vision or Property
+            </label>
+<textarea class="w-full bg-surface-container-low px-4 py-3 font-body-md text-body-md text-primary outline-none focus:bg-surface-bright focus:ring-1 focus:ring-secondary placeholder:text-outline/50" placeholder="Tell us about the property, your architectural aspirations, or special material interests..." rows="3"></textarea>
+</div>
+<!-- Submit CTA Button -->
+<div class="pt-4 flex flex-col md:flex-row items-center justify-between gap-6">
+<button class="w-full md:w-auto bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest px-10 py-4 hover:bg-secondary transition-colors flex items-center justify-center gap-3" type="submit">
+<span>Submit Architectural Commission Brief</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<div class="text-center md:text-right">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Direct Studio Concierge</span>
+<a class="font-body-sm text-body-sm text-primary font-medium hover:text-secondary transition-colors" href="tel:+917926850123">+91 (079) 4892 0100</a>
+</div>
+</div>
+</form>
+<!-- Dynamic Success Message Alert -->
+<div class="hidden mt-6 p-4 bg-secondary-fixed text-on-secondary-fixed text-center font-label-md text-label-md uppercase tracking-wider" id="inquiry-success-message">
+          Thank you. Your architectural commission brief has been logged. Our studio principal will contact you within 24 hours.
+        </div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+       11. INSTAGRAM EDITORIAL FEED & VISUAL EPILOGUE
+       ========================================== -->
+<section class="w-full py-space-lg px-8 lg:px-margin bg-background">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center justify-between mb-8 pb-4 border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-xl">photo_camera</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Studio Vignettes · @ateliervanya</span>
+</div>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-outline hover:text-primary transition-colors" href="#">
+          Follow Journal on Instagram →
+        </a>
+</div>
+<!-- 4-Column Vignette Gallery -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="relative overflow-hidden aspect-square bg-surface-container group">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Quiet interior detail of warm morning sunlight passing through raw unlacquered brass door pull handle on fluted oak joinery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUomrHgYpbqvkc0k6w0MsFHIjyA-uezsCe3-V8_ox8v5iJhcqW5J-O7SdZOWFf0zBCfqa0SMSyBRn-W1k0pysmcJzB-pwCFG_4i5CNxsJI2utfHi4RE2KvyRSMkS0fnTpFWdxOZpfkAlbtEkaxjobIfhSfGraanEnlzHTqb0ypB0g9PEKh9EzTFu4Jx4kT3HGZODxcgjbOBfWc-h7OudqdbDbXxAuwFlfRIGO39ISwON1btRYlagWw"/>
+<div class="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary font-label-sm text-label-sm uppercase tracking-widest">
+            Joinery Detail
+          </div>
+</div>
+<div class="relative overflow-hidden aspect-square bg-surface-container group">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Close up architectural detail of unpolished Jodhpur stone cantilever step meeting hand-poured microcement floor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhrd4ZiXf2XqmGHbeMn2FkPkgoT5wxlTmCM83IG9uy6tOaXETGgIeNI8r_qPSjDszJ08jUIAY0PvQH9SoSmiusZ-5z74-VAyW2yADRIzO-NB0r2yxfO16BOXjc6DL-ODRFJRR3Ei6Y97p2pw_Nbgf_s6r6ToG2e2a8Qw6scJ4wVHWCPsitjvf7m4JJLlTz_qfj4mw6Dp2Ktt9ZojirKl_xAnqb-nypYBiBVipuy9gx6uwxPyvACjvF"/>
+<div class="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary font-label-sm text-label-sm uppercase tracking-widest">
+            Cantilever Step
+          </div>
+</div>
+<div class="relative overflow-hidden aspect-square bg-surface-container group">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Monolithic travertine basin in architectural powder room with minimal concealed wall spout and warm cove backlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZgKVO4GwSdY7HlrwVA3eeghvW1fhRDQanWYVQikvKcing07C-NPnkAmjV8sozoaaTq1WQKYqZVpTR1--y3xQmB-2bRWhmOvEZUhh0Wdr9N7eG07lEHu_QlIQ6YBaHSRXyICVOcvtnp3HnMCKxxUd2wMwlvjYeDp7pJBrlqXcPEagUH9z8xysAQxcDcqMl8_JK2-7kgV4sems1vqOxQl4GpmQ-mB8quC8TJush77wZQj1cNWqGm9fK"/>
+<div class="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary font-label-sm text-label-sm uppercase tracking-widest">
+            Stone Powder
+          </div>
+</div>
+<div class="relative overflow-hidden aspect-square bg-surface-container group">
+<img class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" data-alt="Still life photograph of tactile material tray with rough limestone fragments, dark teak samples, and heavy handloom linen swatch." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_foTo8LZ9EKMNOM31IKFXB87UgDpM4edu63DS9Ecw8W78usHJ_1jShowysA1uILp3g11sNSNxuNncudBveLZHsgdjJjBxVn35iur4r8PJqmBYp__wWaqxiEDGMjdKM751uPIHajK9r5_3dajIeDtiWkW9raUBbBS-3lrSzFdKXHNHjDq5mhb84hkelulBB5o7BaXVCmqFwcushBD2Q_vT_8rnAOlcyhMfE7uLFLBKXeRb51Yg5Eb8"/>
+<div class="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary font-label-sm text-label-sm uppercase tracking-widest">
+            Material Palette
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Logic for Portfolio Filtering and Consultation Intake -->
+<script>
+    // Portfolio Filtering logic
+    const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
+    const portfolioCards = document.querySelectorAll('#selected-works [data-category]');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-on-primary');
+          btn.classList.add('bg-surface-bright', 'text-on-surface-variant');
+        });
+        button.classList.add('bg-primary', 'text-on-primary');
+        button.classList.remove('bg-surface-bright', 'text-on-surface-variant');
+
+        portfolioCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Typology Chips Selection
+    const typologyChips = document.querySelectorAll('.typology-chip');
+    const selectedTypologyInput = document.getElementById('selected-typology');
+    typologyChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        typologyChips.forEach(c => c.classList.remove('bg-primary', 'text-on-primary'));
+        chip.classList.add('bg-primary', 'text-on-primary');
+        selectedTypologyInput.value = chip.getAttribute('data-value');
+      });
+    });
+
+    // Scale Chips Selection
+    const scaleChips = document.querySelectorAll('.scale-chip');
+    const selectedScaleInput = document.getElementById('selected-scale');
+    scaleChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        scaleChips.forEach(c => c.classList.remove('bg-primary', 'text-on-primary'));
+        chip.classList.add('bg-primary', 'text-on-primary');
+        selectedScaleInput.value = chip.getAttribute('data-value');
+      });
+    });
+
+    // Form submission simulation
+    function handleInquirySubmit() {
+      const msg = document.getElementById('inquiry-success-message');
+      msg.classList.remove('hidden');
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-space-xl pt-space-xl pb-space-lg"><div class="w-full px-8 lg:px-margin max-w-7xl mx-auto"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter pb-space-lg"><div class="lg:col-span-4 flex flex-col justify-between"><div class="space-y-4"><h3 class="font-headline-sm text-headline-sm text-primary">ATELIER VANYA</h3><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">An architectural interior monograph practice engaging spatial rhythm, unpolished natural limestone, hand-troweled slaked lime, and patinated brass elements.</p></div><div class="mt-8"><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary block mb-1">Press Distinction</span><p class="font-body-sm text-body-sm text-on-surface">Featured in Architectural Digest AD100 &amp; Elle Décor</p></div></div><div class="lg:col-span-2 flex flex-col space-y-3"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Locations</span><div class="space-y-4"><div class="space-y-1"><p class="font-label-md text-label-md text-primary uppercase">Ahmedabad Flagship</p><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">42 Bodakdev Sanctuary Road<br/>Ahmedabad, Gujarat 380054</p></div><div class="space-y-1"><p class="font-label-md text-label-md text-primary uppercase">Mumbai Studio</p><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Kala Ghoda Heritage Loft 4B<br/>Fort, Mumbai 400001</p></div></div></div><div class="lg:col-span-2 flex flex-col space-y-2"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2">Index</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="selected-works" href="#">Selected Works</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="studio" href="#">The Atelier</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="services" href="#">Practice &amp; Disciplines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="process" href="#">Artisanal Methodology</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="materiality" href="#">Material Spec Archive</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="journal" href="#">Monograph Journal</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#">Consultation Appointments</a></div><div class="lg:col-span-4 flex flex-col justify-between"><div class="space-y-3"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant block">Monograph Gazette</span><p class="font-body-sm text-body-sm text-on-surface-variant">Receive biannual printed folios, architectural dissertations, and private vernissage invitations.</p><div class="flex items-stretch mt-4"><input class="bg-surface-container-lowest text-on-surface font-body-sm text-body-sm px-4 py-3 w-full outline-none focus:ring-1 focus:ring-secondary placeholder:text-on-surface-variant/50" placeholder="Enter your correspondence email" type="email"/><button class="bg-primary text-on-primary px-6 font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-colors">Join</button></div></div><div class="flex items-center gap-6 mt-8"><a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a><a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Pinterest</a><a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">ArchDaily</a><a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">AD Pro</a></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-4 text-on-surface-variant/80"><p class="font-body-sm text-body-sm">© 2025 Atelier Vanya Architecture &amp; Spatial Studio. All rights reserved.</p><div class="flex items-center gap-6"><a class="font-label-sm text-label-sm uppercase tracking-wider hover:text-on-surface transition-colors" href="#">Legal &amp; Provenance</a><a class="font-label-sm text-label-sm uppercase tracking-wider hover:text-on-surface transition-colors" href="#">Client Portal</a><a class="font-label-sm text-label-sm uppercase tracking-wider hover:text-on-surface transition-colors" href="#">Privacy Statement</a></div></div></div></footer></body></html>
